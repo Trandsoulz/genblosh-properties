@@ -7,13 +7,13 @@ import {
   Phone,
   // Building2,
   //Search,
-  MapPin,
+  // MapPin,
 } from "lucide-react";
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  // const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -166,7 +166,7 @@ const Header: React.FC = () => {
         </div>
 
         {/* Quick Search Bar */}
-        {isSearchOpen && (
+        {/* {isSearchOpen && (
           <div className="absolute left-0 right-0 top-full mt-2 bg-white shadow-lg rounded-b-lg p-4 animate-fade-in">
             <Container>
               <div className="flex gap-4">
@@ -187,7 +187,7 @@ const Header: React.FC = () => {
               </div>
             </Container>
           </div>
-        )}
+        )} */}
 
         {/* Mobile Menu */}
         {isMenuOpen && (
