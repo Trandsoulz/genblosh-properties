@@ -17,8 +17,14 @@ const Footer: React.FC = () => {
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
-            <div className="flex items-center mb-6">
-              <Building2 size={32} className="text-[#D56A34] mr-2" />
+            <div className="">
+              <img
+                src="/logo.webp"
+                alt="logo"
+                height={50}
+                width={45}
+                className={`mr-2 mb-6`}
+              />
               <span className=" text-xl font-bold">Genblosh Properties</span>
             </div>
             <p className="text-gray-300 mb-6">
@@ -99,7 +105,7 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-6">Contact Us</h3>
             <ul className="space-y-4">
-              <li className="flex items-start">
+              {/* <li className="flex items-start">
                 <MapPin
                   size={20}
                   className="text-[#D56A34] mr-3 mt-1 flex-shrink-0"
@@ -109,19 +115,28 @@ const Footer: React.FC = () => {
                   <br />
                   New York, NY 10001
                 </span>
-              </li>
+              </li> */}
               <li className="flex items-center">
                 <Phone
                   size={20}
                   className="text-[#D56A34] mr-3 flex-shrink-0"
                 />
-                <span className="text-gray-300">(555) 123-4567</span>
+                {/* <span className="text-gray-300">(555) 123-4567</span> */}
+                <a href="tel:07497109117" className="text-gray-300">
+                  074971-09117
+                </a>
               </li>
               <li className="flex items-center">
                 <Mail size={20} className="text-[#D56A34] mr-3 flex-shrink-0" />
-                <span className="text-gray-300">
+                {/* <span className="text-gray-300">
                   info@genbloshproperties.com
-                </span>
+                </span> */}
+                <a
+                  href="mailto:info@genbloshproperties.com"
+                  className="text-gray-300"
+                >
+                  info@genbloshproperties.com
+                </a>
               </li>
             </ul>
           </div>

@@ -7,7 +7,7 @@ const CTASection: React.FC = () => {
     <section className="py-20 bg-[#0F172A]">
       <Container>
         <div className="text-center max-w-3xl mx-auto">
-          <h2 className="text-3xl  font-bold text-white mb-6">
+          <h2 className="text-3xl font-bold text-white mb-6">
             Ready to Find Your Perfect Property?
           </h2>
           <p className="text-gray-300 mb-8">

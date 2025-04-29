@@ -18,7 +18,7 @@ const ContactSection: React.FC = () => {
             </p>
 
             <div className="space-y-6 mb-8">
-              <div className="flex items-start">
+              {/* <div className="flex items-start">
                 <div className="bg-[#0F172A] p-3 rounded-full mr-4">
                   <MapPin className="text-[#D56A34]" size={20} />
                 </div>
@@ -26,7 +26,7 @@ const ContactSection: React.FC = () => {
                   <h4 className="font-semibold text-[#0F172A]">Office Location</h4>
                   <p className="text-gray-600">123 Luxury Avenue, New York, NY 10001</p>
                 </div>
-              </div>
+              </div> */}
               
               <div className="flex items-start">
                 <div className="bg-[#0F172A] p-3 rounded-full mr-4">
@@ -34,7 +34,7 @@ const ContactSection: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-[#0F172A]">Phone Number</h4>
-                  <p className="text-gray-600">(555) 123-4567</p>
+                  <a href='tel:07497109117' className="text-gray-600">074971-09117</a>
                 </div>
               </div>
               
@@ -44,7 +44,9 @@ const ContactSection: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-[#0F172A]">Email Address</h4>
-                  <p className="text-gray-600">info@genbloshproperties.com</p>
+                  {/* <p className="text-gray-600">info@genbloshproperties.com</p> */}
+                  <a href='mailto:info@genbloshproperties.com' className="text-gray-600">info@genbloshproperties.com</a>
+
                 </div>
               </div>
               
