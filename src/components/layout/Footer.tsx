@@ -1,10 +1,10 @@
 import React from "react";
 import Container from "../ui/Container";
 import {
-  Building2,
+  // Building2,
   Mail,
   Phone,
-  MapPin,
+  // MapPin,
   Facebook,
   Twitter,
   Instagram,
