@@ -4,7 +4,7 @@ import { Shield, Target, Users, Award, Clock, Headphones } from "lucide-react";
 
 const WhyChooseUsSection: React.FC = () => {
   return (
-    <section className="py-24">
+    <section className="py-24" id="whychooseus">
       <Container>
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">

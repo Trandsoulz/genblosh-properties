@@ -111,6 +111,16 @@ const Header: React.FC = () => {
             >
               About Us
             </a>
+            <a
+              href="#whychooseus"
+              className={`${
+                isScrolled
+                  ? "text-[#0F172A] hover:text-[#D56A34]"
+                  : "text-white hover:text-[#D56A34]"
+              } transition-colors`}
+            >
+              Why Choose Us
+            </a>
             {/* <div className="flex items-center ml-6">
               <Phone
                 size={16}
@@ -227,6 +237,13 @@ const Header: React.FC = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 About Us
+              </a>
+              <a
+                href="#whychooseus"
+                className="px-6 py-4 text-[#0F172A] hover:bg-gray-50"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Why Choose Us
               </a>
               <div className="px-6 py-4 flex items-center">
                 <Phone size={16} className="text-[#0F172A] mr-2" />
