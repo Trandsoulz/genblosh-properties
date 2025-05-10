@@ -1,6 +1,13 @@
 import React from "react";
 import Container from "../ui/Container";
-import { Shield, Target, Users, Award, Clock, Headphones } from "lucide-react";
+import {
+  Shield,
+  Target,
+  Users,
+  // Award,
+  Clock,
+  Headphones,
+} from "lucide-react";
 
 const WhyChooseUsSection: React.FC = () => {
   return (
