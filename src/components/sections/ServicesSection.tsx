@@ -43,7 +43,7 @@ const ServicesSection: React.FC = () => {
         
         <div className="mt-16 bg-[#0F172A] rounded-lg overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-2">
-            <div className="p-10 lg:p-16 flex flex-col justify-center">
+            <div className="p-6 md:p-10 lg:p-16 flex flex-col justify-center">
               <h3 className="text-2xl  font-bold text-white mb-4">
                 Property Management Excellence
               </h3>

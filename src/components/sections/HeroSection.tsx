@@ -16,7 +16,7 @@ const HeroSection: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70"></div>
       </div>
 
-      <Container className="relative z-10">
+      <Container className="relative z-10 pt-16">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl  font-bold text-white mb-6 leading-tight animate-fade-in">
             GENBLOSH <span className="text-[#D56A34]">PROPERTIES</span>

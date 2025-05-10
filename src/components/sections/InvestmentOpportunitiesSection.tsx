@@ -17,7 +17,7 @@ const InvestmentOpportunitiesSection: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 gap-8 mb-16">
           <div className="relative overflow-hidden group rounded-2xl">
             <img
               src="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg"
@@ -25,7 +25,7 @@ const InvestmentOpportunitiesSection: React.FC = () => {
               className="w-full h-[400px] object-cover transform group-hover:scale-110 transition-transform duration-500"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent">
-              <div className="absolute bottom-0 left-0 right-0 p-8">
+              <div className="absolute bottom-0 left-0 right-0 md:p-8 p-6">
                 <h3 className="text-2xl  text-white mb-3">
                   Residential Properties
                 </h3>
@@ -40,7 +40,7 @@ const InvestmentOpportunitiesSection: React.FC = () => {
             </div>
           </div>
 
-          <div className="relative overflow-hidden group rounded-2xl">
+          {/* <div className="relative overflow-hidden group rounded-2xl">
             <img
               src="https://images.pexels.com/photos/631477/pexels-photo-631477.jpeg"
               alt="Commercial Investment"
@@ -60,7 +60,7 @@ const InvestmentOpportunitiesSection: React.FC = () => {
                 </Button>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

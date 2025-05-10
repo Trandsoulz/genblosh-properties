@@ -83,7 +83,7 @@ const ContactSection: React.FC = () => {
           </div>
 
           <div>
-            <div className="bg-white p-8 rounded-lg shadow-md">
+            <div className="bg-white p-6 md:p-8 rounded-lg shadow-md">
               <h3 className="text-2xl font-semibold text-[#0F172A] mb-6">
                 Send Us a Message
               </h3>
