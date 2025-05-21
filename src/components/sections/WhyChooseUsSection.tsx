@@ -13,7 +13,7 @@ const WhyChooseUsSection: React.FC = () => {
   return (
     <section className="py-24" id="whychooseus">
       <Container>
-        <div className="text-center mb-16">
+        {/* <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Why Choose Genblosh Properties?
           </h2>
@@ -22,7 +22,7 @@ const WhyChooseUsSection: React.FC = () => {
             excellence, we deliver exceptional results for our clients through
             innovative solutions and personalized service.
           </p>
-        </div>
+        </div> */}
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white/5 backdrop-blur-sm p-8 rounded-xl border border-white/10 transform hover:-translate-y-2 transition-all duration-300">

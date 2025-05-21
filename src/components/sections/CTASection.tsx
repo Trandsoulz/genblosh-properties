@@ -15,9 +15,9 @@ const CTASection: React.FC = () => {
             is here to guide you through every step of the process.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button variant="secondary" size="lg">
+            {/* <Button variant="secondary" size="lg">
               View Properties
-            </Button>
+            </Button> */}
             <Button variant="outline" size="lg" className="border-[#D56A34] text-[#D56A34]">
               Schedule Consultation
             </Button>

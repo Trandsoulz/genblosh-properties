@@ -7,8 +7,37 @@ import {
   // MapPin,
   Clock,
 } from "lucide-react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+
+const contactFormSchema = z.object({
+  firstName: z.string().min(2, "First name must be at least 2 characters"),
+  lastName: z.string().min(2, "Last name must be at least 2 characters"),
+  email: z.string().email("Please enter a valid email address"),
+  phone: z.string().min(10, "Please enter a valid phone number"),
+  interest: z.enum(["buying", "selling", "investing", "management", "other"], {
+    required_error: "Please select an option",
+    invalid_type_error: "Please select an option",
+  }),
+  message: z.string().min(10, "Message must be at least 10 characters"),
+});
+
+type ContactFormData = z.infer<typeof contactFormSchema>;
 
 const ContactSection: React.FC = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<ContactFormData>({
+    resolver: zodResolver(contactFormSchema),
+  });
+
+  const onSubmit = (data: ContactFormData) => {
+    console.log("Form submitted:", data);
+  };
+
   return (
     <section id="contact" className="py-20 bg-gray-50">
       <Container>
@@ -88,7 +117,10 @@ const ContactSection: React.FC = () => {
                 Send Us a Message
               </h3>
 
-              <form className="space-y-4">
+              <form
+                onSubmit={handleSubmit(onSubmit)}
+                className="space-y-4 text-black"
+              >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label
@@ -98,10 +130,16 @@ const ContactSection: React.FC = () => {
                       First Name
                     </label>
                     <input
+                      {...register("firstName")}
                       type="text"
                       id="firstName"
                       className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-[#D56A34]"
                     />
+                    {errors.firstName && (
+                      <p className="mt-1 text-sm text-red-600">
+                        {errors.firstName.message}
+                      </p>
+                    )}
                   </div>
                   <div>
                     <label
@@ -111,10 +149,16 @@ const ContactSection: React.FC = () => {
                       Last Name
                     </label>
                     <input
+                      {...register("lastName")}
                       type="text"
                       id="lastName"
                       className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-[#D56A34]"
                     />
+                    {errors.lastName && (
+                      <p className="mt-1 text-sm text-red-600">
+                        {errors.lastName.message}
+                      </p>
+                    )}
                   </div>
                 </div>
 
@@ -126,10 +170,16 @@ const ContactSection: React.FC = () => {
                     Email Address
                   </label>
                   <input
+                    {...register("email")}
                     type="email"
                     id="email"
                     className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-[#D56A34]"
                   />
+                  {errors.email && (
+                    <p className="mt-1 text-sm text-red-600">
+                      {errors.email.message}
+                    </p>
+                  )}
                 </div>
 
                 <div>
@@ -140,10 +190,16 @@ const ContactSection: React.FC = () => {
                     Phone Number
                   </label>
                   <input
+                    {...register("phone")}
                     type="tel"
                     id="phone"
                     className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-[#D56A34]"
                   />
+                  {errors.phone && (
+                    <p className="mt-1 text-sm text-red-600">
+                      {errors.phone.message}
+                    </p>
+                  )}
                 </div>
 
                 <div>
@@ -154,18 +210,22 @@ const ContactSection: React.FC = () => {
                     I'm Interested In
                   </label>
                   <select
+                    {...register("interest")}
                     id="interest"
                     className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-[#D56A34]"
                   >
-                    <option value="" disabled selected>
-                      Please select...
-                    </option>
+                    <option value="">Please select...</option>
                     <option value="buying">Buying a Property</option>
                     <option value="selling">Selling a Property</option>
                     <option value="investing">Investment Opportunities</option>
                     <option value="management">Property Management</option>
                     <option value="other">Other</option>
                   </select>
+                  {errors.interest && (
+                    <p className="mt-1 text-sm text-red-600">
+                      Please select an option
+                    </p>
+                  )}
                 </div>
 
                 <div>
@@ -176,13 +236,19 @@ const ContactSection: React.FC = () => {
                     Message
                   </label>
                   <textarea
+                    {...register("message")}
                     id="message"
                     rows={4}
                     className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-[#D56A34]"
                   ></textarea>
+                  {errors.message && (
+                    <p className="mt-1 text-sm text-red-600">
+                      {errors.message.message}
+                    </p>
+                  )}
                 </div>
 
-                <Button variant="secondary" className="w-full">
+                <Button type="submit" variant="secondary" className="w-full">
                   Send Message
                 </Button>
               </form>
