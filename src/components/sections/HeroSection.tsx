@@ -56,7 +56,7 @@ const HeroSection: React.FC = () => {
             </Button>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+          <div className="grid grid-cols-1 md:grid-cols-2   gap-8 mt-12">
             <div className="bg-black/30 backdrop-blur-sm p-6 rounded-lg border border-white/10">
               <h3 className="text-[#D56A34]  text-xl mb-2">
                 Property Sourcing
