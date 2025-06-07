@@ -87,7 +87,7 @@ const WhyChooseUsSection: React.FC = () => {
           <div className="bg-white/5 backdrop-blur-sm p-8 rounded-xl border border-white/10 transform hover:-translate-y-2 transition-all duration-300">
             <Headphones className="text-[#D56A34] mb-6" size={40} />
             <h3 className="text-xl font-semibold text-white mb-4">
-              24/7 Support
+              Support
             </h3>
             <p className="text-gray-300">
               Our dedicated team is always available to address your needs and

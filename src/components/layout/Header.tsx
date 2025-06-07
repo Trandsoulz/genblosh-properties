@@ -137,7 +137,7 @@ const Header: React.FC = () => {
               </span>
             </div> */}
             <a
-              href="#services"
+              href="#contact"
               className={`${
                 isScrolled
                   ? "bg-[#0F172A] text-white hover:bg-[#1E293B] dark:bg-[#D56A34] dark:text-[#0F172A] dark:hover:bg-[#C9A54E] "

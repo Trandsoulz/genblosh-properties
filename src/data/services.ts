@@ -10,7 +10,7 @@ export const services: Service[] = [
   {
     id: '2',
     title: 'Investment Consulting',
-    description: 'Our experts analyze market trends and property potential to help you make informed investment decisions.',
+    description: 'Our experts analyse market trends and property potential to help you make informed investment decisions.',
     icon: 'trending-up'
   },
   {
@@ -22,7 +22,7 @@ export const services: Service[] = [
   {
     id: '4',
     title: 'Market Analysis',
-    description: 'Detailed market analysis to identify emerging trends and high-potential investment areas.',
+    description: 'Our experts analyze property markets, identify emerging trends and help you make informed investment decisions',
     icon: 'bar-chart'
   }
 ];
