@@ -41,7 +41,6 @@ const ContactSection: React.FC = () => {
 
     try {
       const res = await axios.post(
-        // "http://localhost:8000/api/v1/support-mail",
         "https://api.apexdmf.com/api/v1/support-mail-genblosh",
         data
       );
